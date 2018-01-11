@@ -23,19 +23,23 @@ $("#addTrain").on("click",function(event){
 	var firstTrain = $("#train-time").val().trim();
 	var frequency = $("#train-frequency").val().trim();
 
+	if (trainName.length && destination.length && firstTrain.length && frequency.length >0){
 	//Push values to the Firebase database
-	database.ref().push({
-		trainName:trainName,
-		destination:destination,
-		firstTrain:firstTrain,
-		frequency:frequency,
-	});
+		database.ref().push({
+			trainName:trainName,
+			destination:destination,
+			firstTrain:firstTrain,
+			frequency:frequency,
+		});
 
-	$("#train-name").val("");
-	$("#train-destination").val("");
-	$("#train-time").val("");
-	$("#train-frequency").val("");
+		$("#train-name").val("");
+		$("#train-destination").val("");
+		$("#train-time").val("");
+		$("#train-frequency").val("");
 
+	} else {
+		alert("Please fill out all fields")
+	};
 });
 
 	//Add event listener for every new child created in Firebase database

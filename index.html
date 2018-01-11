@@ -10,6 +10,7 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
 </head>
 	<body id="bootstrap-override">
 	<!-- Banner -->
@@ -57,23 +58,24 @@
 								<fieldset>
 									<div class="form-group">
 										<label class="col-form-label" for="train-name">Train Name</label>
-										 <input type="text" class="form-control" placeholder="Enter Train Name" id="train-name">
+										 <input type="text" class="form-control" placeholder="Enter Train Name" id="train-name" required="required">
 									</div>
 									<div class="form-group">
 										<label class="col-form-label" for="train-destination">Train Destination</label>
-										 <input type="text" class="form-control" placeholder="Enter Train Destination" id="train-destination">
+										 <input type="text" class="form-control" placeholder="Enter Train Destination" id="train-destination" required="required">
 									</div>
 									<div class="form-group">
 										<label class="col-form-label" for="train-time">First Train Time</label>
-										 <input type="text" class="form-control" placeholder="Enter First Train Departure in Military Time, e.g. 14:00" id="train-time">
+										 <input type="text" class="form-control" placeholder="Enter First Train Departure in Military Time, e.g. 14:00" id="train-time" required="required">
 									</div>
 									<div class="form-group">
 										<label class="col-form-label" for="frequency">Frequency</label>
-										 <input type="text" class="form-control" placeholder="Enter Train Frequency in Minutes" id="train-frequency">
+										 <input type="text" class="form-control" placeholder="Enter Train Frequency in Minutes" id="train-frequency" required="required">
 									</div>
+								<button type="submit" class="btn btn-primary" id="addTrain">Submit</button>
 								</fieldset>
 							</form>
-							<button type="button" class="btn btn-primary" id="addTrain">Submit</button>
+						
 						</div>
 					</div>
 				</div>

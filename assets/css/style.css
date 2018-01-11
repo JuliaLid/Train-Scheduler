@@ -16,4 +16,8 @@
 	font-size: 1.5rem;
 }
 
+#bootstrap-override button {
+	margin-top: 15px;
+}
+
 
